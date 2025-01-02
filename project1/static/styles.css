@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
+body {
+    margin: 0;
+    font-family: 'Varela Round';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #D7E7C5; /* Matcha Green */
+}
+
+.center-container {
+    text-align: center;
+    margin-top: -100px;
+}
+
+.app-name {
+    font-size: 10rem;
+    color: #4F7942; /* Darker Matcha Green */
+    margin-bottom: 20px;
+    font-family: 'Varela Round'; 
+}
+
+.question {
+    font-size: 3rem;
+    color: #4F7942; /* Darker Matcha Green */
+    margin-bottom: 20px;
+    font-family: 'Varela Round'; 
+}
+
+.login-form input {
+    display: block;
+    width: 300px;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    /*  #A2C68B; Lighter Matcha Green */
+    border-radius: 15px;
+}
+
+.login-form button {
+    width: 120px;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #4F7942; /* Darker Matcha Green */
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #3B5D30;
+}
+
+.register-button {
+    display: block;
+    width: 120px;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #4F7942; /* Darker Matcha Green */
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.register-form input {
+    display: block;
+    width: 300px;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    /*  #A2C68B; Lighter Matcha Green */
+    border-radius: 15px;
+}
+
+.register-button:hover {
+    background-color: #3B5D30;
+}
+
+.text-box {
+    width: 80%;
+    height: 60px;
+    padding: 10px;
+    font-size: 1rem;
+    border: none; /* #A2C68B Lighter Matcha Green */
+    border-radius: 15px;
+}
+
+.text-box:focus {
+    outline: none;
+    border-color: #4F7942; /* Darker Matcha Green */
+}
+
+.enter-button {
+    width: 120px;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #4F7942; /* Darker Matcha Green */
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.logout-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #4F7942; /* Darker Matcha Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #3B5D30;
+}

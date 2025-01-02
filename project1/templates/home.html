@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block body %}
+
+    {% if message %}
+        <button class="logout-button" onclick="location.href='/logout'">Logout</button>
+        <div class="center-container">
+            <h1 class="question">{{ message }}</h1>
+            <form action="{% url 'home' %}" method="post">
+                {% csrf_token %}
+                <textarea class="text-box" name="text" placeholder="Message Sage"></textarea>
+                <input type="submit" value="➤">
+            </form>
+        </div>
+    {% else %}
+        <button class="logout-button" onclick="location.href='/logout'">Logout</button>
+        <div class="center-container">
+            <h1 class="question">How can I help?</h1>
+            <form action="{% url 'home' %}" method="post">
+                {% csrf_token %}
+                <textarea class="text-box" name="text" placeholder="Message Sage"></textarea>
+                <input type="submit" value="➤">
+            </form>
+        </div>
+    {% endif %}
+
+
+{% endblock %}
+
+{% block script %}
+    <script>
+        
+    </script>
+{% endblock %}

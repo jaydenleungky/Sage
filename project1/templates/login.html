@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div class="center-container">
+        <h1 class="app-name">Sage</h1>
+        <form class="login-form" action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            {% if message %}
+                <div>{{ message }}</div>
+            {% endif %}
+            <button type="submit">Login</button>
+        </form>
+        <button class="register-button" onclick="location.href='register'">Register</button>
+    </div>
+
+{% endblock %}
