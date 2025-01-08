@@ -81,6 +81,18 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Sage.wsgi.application'
 
 
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'APP': {
+            'client_id': '16097133311-n70i63hom7qqqcbqotpi9p0g2ndgcqp9.apps.googleusercontent.com',
+            'secret': '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',
+            'key': ''
+        }
+    }
+}
+
+
+
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
@@ -90,6 +102,12 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',  # Default backend
+    'allauth.account.auth_backends.AuthenticationBackend',  # For django-allauth
+]
+
 
 
 # Password validation
@@ -137,4 +155,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 LOGIN_URL = '/login'
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
 
