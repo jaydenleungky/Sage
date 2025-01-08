@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block body %}
+    <button class="logout-button" onclick="location.href='logout'">Logout</button>
+    <div class="center-container">
+        <h1 class="app-name">Sage</h1>
+        <textarea class="text-box" placeholder="Enter your text here..."></textarea>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'sage.js' %}"></script>
+{% endblock %}
