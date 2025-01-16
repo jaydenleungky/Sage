@@ -81,19 +81,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Sage.wsgi.application'
 
 
-SOCIALACCOUNT_PROVIDERS = {
-    'google': {
-        'APP': {
-            'client_id': '16097133311-n70i63hom7qqqcbqotpi9p0g2ndgcqp9.apps.googleusercontent.com',
-            'secret': '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',
-            'key': '',
-            'scopes': ['email', 'profile'],
-        }
-    }
-}
-
-
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
@@ -107,6 +94,7 @@ DATABASES = {
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',  # Default backend
     'allauth.account.auth_backends.AuthenticationBackend',  # For django-allauth
+    'django_auth0.backend.Auth0Backend',
 ]
 
 
@@ -130,6 +118,13 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 AUTH_USER_MODEL = 'project1.User'
+
+AUTH0_DOMAIN = "your-auth0-domain.auth0.com"
+AUTH0_CLIENT_ID = "your-client-id"
+AUTH0_CLIENT_SECRET = "your-client-secret"
+AUTH0_AUDIENCE = "your-api-identifier"  # Optional, needed if using APIs
+AUTH0_CALLBACK_URL = "http://localhost:8000/callback"  # Replace with your callback URL
+
 
 
 # Internationalization
@@ -159,5 +154,15 @@ LOGIN_URL = '/login'
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'none'  # 'none', 'optional', or 'mandatory'
+SOCIALACCOUNT_QUERY_EMAIL = True
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': ['profile', 'email'],
+        'AUTH_PARAMS': {'access_type': 'online'},
+    }
+}
 
 

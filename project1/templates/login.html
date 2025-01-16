@@ -17,5 +17,11 @@
         <div class="g-signin2" data-onsuccess="onSignIn">Sign in with Google</div>
     </div>
 
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script>
+    var config = {
+        apiKey: "AIzaSyAg_WrFw5IsIqKb6LLjjagECDMMM2RYOhQ",
+        authDomain: "sage-447206.firebaseapp.com",
+    };
+    firebase.initializeApp(config);
+    </script>
 {% endblock %} 
